@@ -22,17 +22,18 @@
 }
 .rrasm{
     background-color: rgb(143, 46, 46);
-    background-image: url(../../../1695226644_2-7.jpg);
+    background-image: url(../../../1695226644_2-7.jpg); 
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     color: #fff;
     position: relative;
+    color: #000000;
 }
 header{
     background-size: cover;
     background-repeat: no-repeat;
-  
+    color: white;
    
     
 }
@@ -48,7 +49,7 @@ nav{
             list-style-type: none;
             a{
                 text-decoration: none;
-                color: #fff;
+                color: white;
             }
         }
     }
@@ -84,8 +85,16 @@ nav{
    
 }
 main{
-    background: linear-gradient(135deg, #000000, #434343, #888888, #ffffff);
+    background: linear-gradient(135deg, #000000, #222, #000000);
     padding: 50px;
+    color: #fff     ;
+    button{
+        background-color: transparent;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+
+    }
 
 }
 .main-about{
@@ -94,7 +103,7 @@ main{
     align-items: center;
     margin-top: 150px;
     position: relative;
-    top:-250px;
+    top:-370px;
 
 
     // justify-content: center;
@@ -108,10 +117,9 @@ main{
        
     }
     button{
-        background-color: #827777;
-        width: 200px;
-        border-color: #5c5656;
-        color: #f6ff00;
+            border: none;
+        color: #fff;
+        margin-left: 20px;
         &:active{
             background-color: #e4e4e4;
             color: #000000;
@@ -133,15 +141,15 @@ main{
     }
 }
 footer{
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-top: -50px;
-    background-color: #0B1D26;
+    background-color: #222;
     color: white;
-    display: flex;
-    justify-content: space-between;
-    padding-left: 80px;
-    padding-right: 80px;
+    .ftr-content{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px;
+    
+    }
     
     h2{
         padding-bottom: 20px;
@@ -153,5 +161,159 @@ footer{
       display: flex;
       flex-direction: column;
       gap: 20px;
+    }
+}
+.burger{
+    display: none;
+}
+input{
+    display: none;
+}
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(150%);
+    transition: 1s; 
+    background-color: aqua;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 22222;
+    text-align: center;
+    ul{
+        list-style-type: none;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
+@media (max-width: 930px){
+    .rrasm{
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+    }
+    .burger{
+        display: block;
+    }
+    input[type="checkbox"]:checked+ .sidebar{
+        transform: translateX(0);
+        // height: 100vh;
+        // top: 0;
+    }
+    nav{
+        .nav_img_ul_a{
+            display: none;
+            ul{
+                display: none;  
+            }
+            .nav-imgg{
+                display: none;
+            }
+        }
+        .sidebar{
+            display: block;
+            label{
+                margin-left: 750px;
+                margin-top: 50px;
+                color: black;
+                font-size: 20px;
+            }
+        }
+        
+    }
+    .main-about{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 900px;
+    }
+    .main-num{
+        display: none;
+    }
+
+}
+.contenor_ichdagi_p{
+    display: none;
+}
+@media(max-width:430px){
+    nav{
+        .sidebar{
+            label{
+                text-align: center;
+                margin-left: 200px;
+            }
+        }
+    }
+    .main-about{
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        max-width: 400px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        h2{
+            width: 360px;
+        }
+        p{
+            width: 360px;
+        }
+        .main-last{
+            width: 100%;
+            max-width: 350px;
+            margin-left: 0px;
+        }
+    }
+    .contenor_ichdagi_p{
+        display: none;
+    }
+    .main-num{
+        display: none; 
+    }
+    .main_title{
+        h1{
+            width: 100%;
+            max-width: 350px;
+            text-align: center;
+            margin-left: 40px;
+
+        }
+        p{
+            width: 100%;
+            max-width: 350px;
+            margin-left: 82px;
+        }
+        img{
+            margin-left: 45px;
+        }
+
+    
+    }
+    .burger{
+        label{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-top: 20px;
+            i{
+                font-size: 30px;
+            }
+        }
+    }
+    footer{
+        background-color: #222;
+        color: white;
+        .ftr-content{
+            flex-direction: column;
+            gap: 10px;
+            padding: 20px;
+        }
     }
 }

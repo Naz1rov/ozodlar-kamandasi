@@ -26,11 +26,13 @@
   height: 100vh;
   color: #fff;
   position: relative;
+  color: #000000;
 }
 
 header {
   background-size: cover;
   background-repeat: no-repeat;
+  color: white;
 }
 
 nav .nav_img_ul_a {
@@ -45,7 +47,7 @@ nav .nav_img_ul_a ul {
 }
 nav .nav_img_ul_a ul a {
   text-decoration: none;
-  color: #fff;
+  color: white;
 }
 
 .contenor_ichdagi_p {
@@ -79,8 +81,15 @@ nav .nav_img_ul_a ul a {
 }
 
 main {
-  background: linear-gradient(135deg, #000000, #434343, #888888, #ffffff);
+  background: linear-gradient(135deg, #000000, #222, #000000);
   padding: 50px;
+  color: #fff;
+}
+main button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
 }
 
 .main-about {
@@ -89,7 +98,7 @@ main {
   align-items: center;
   margin-top: 150px;
   position: relative;
-  top: -250px;
+  top: -370px;
 }
 .main-about h2 {
   font-size: 40px;
@@ -100,10 +109,9 @@ main {
   width: 500px;
 }
 .main-about button {
-  background-color: #827777;
-  width: 200px;
-  border-color: #5c5656;
-  color: #f6ff00;
+  border: none;
+  color: #fff;
+  margin-left: 20px;
 }
 .main-about button:active {
   background-color: #e4e4e4;
@@ -123,15 +131,14 @@ main {
 }
 
 footer {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  margin-top: -50px;
-  background-color: #0B1D26;
+  background-color: #222;
   color: white;
+}
+footer .ftr-content {
   display: flex;
   justify-content: space-between;
-  padding-left: 80px;
-  padding-right: 80px;
+  align-items: center;
+  padding: 20px;
 }
 footer h2 {
   padding-bottom: 20px;
@@ -143,4 +150,146 @@ footer .footer_ichi {
 }
 footer .footer_ichi h3 {
   padding-bottom: 20px;
+}
+
+.burger {
+  display: none;
+}
+
+input {
+  display: none;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transform: translateX(150%);
+  transition: 1s;
+  background-color: aqua;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 22222;
+  text-align: center;
+}
+.sidebar ul {
+  list-style-type: none;
+}
+.sidebar ul a {
+  text-decoration: none;
+  color: white;
+}
+
+@media (max-width: 930px) {
+  .rrasm {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+  }
+  .burger {
+    display: block;
+  }
+  input[type=checkbox]:checked + .sidebar {
+    transform: translateX(0);
+  }
+  nav .nav_img_ul_a {
+    display: none;
+  }
+  nav .nav_img_ul_a ul {
+    display: none;
+  }
+  nav .nav_img_ul_a .nav-imgg {
+    display: none;
+  }
+  nav .sidebar {
+    display: block;
+  }
+  nav .sidebar label {
+    margin-left: 750px;
+    margin-top: 50px;
+    color: black;
+    font-size: 20px;
+  }
+  .main-about {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 900px;
+  }
+  .main-num {
+    display: none;
+  }
+}
+.contenor_ichdagi_p {
+  display: none;
+}
+
+@media (max-width: 430px) {
+  nav .sidebar label {
+    text-align: center;
+    margin-left: 200px;
+  }
+  .main-about {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 400px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
+  .main-about h2 {
+    width: 360px;
+  }
+  .main-about p {
+    width: 360px;
+  }
+  .main-about .main-last {
+    width: 100%;
+    max-width: 350px;
+    margin-left: 0px;
+  }
+  .contenor_ichdagi_p {
+    display: none;
+  }
+  .main-num {
+    display: none;
+  }
+  .main_title h1 {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    margin-left: 40px;
+  }
+  .main_title p {
+    width: 100%;
+    max-width: 350px;
+    margin-left: 82px;
+  }
+  .main_title img {
+    margin-left: 45px;
+  }
+  .burger label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+  }
+  .burger label i {
+    font-size: 30px;
+  }
+  footer {
+    background-color: #222;
+    color: white;
+  }
+  footer .ftr-content {
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+  }
 }/*# sourceMappingURL=main.css.map */
